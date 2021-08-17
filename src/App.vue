@@ -16,7 +16,7 @@
                 class="col-lg-12 mb-3 text-left tugas"
               >
                 <div class="form-check">
-                  <ItemTugas v-bind:tugasSaya="tugasSaya" />
+                  <ItemTugas :tugasSaya="tugasSaya" />
                 </div>
               </div>
             </div>

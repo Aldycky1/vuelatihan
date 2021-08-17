@@ -2,15 +2,15 @@
   <div class="">
     <input
       class="form-check-input"
-      onclick=""
+      v-on:click="done"
       type="checkbox"
       value=""
-      id="defaultCheck1"
+      :id="tugasSaya.id"
     />
     <label
       class="form-check-label item"
       :class="{ 'item-completed': tugasSaya.isDone }"
-      for="defaultCheck1"
+      :for="tugasSaya.id"
     >
       {{ tugasSaya.deskripsi }}
     </label>
@@ -21,6 +21,11 @@
 export default {
   name: "ItemTugas",
   props: ["tugasSaya"],
+  methods: {
+    done: function() {
+      this.tugasSaya.isDone = true;
+    },
+  },
 };
 </script>
 
